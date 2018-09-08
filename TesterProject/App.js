@@ -46,6 +46,15 @@ export default createBottomTabNavigator({
         <Icon name="ios-card" color={tintColor} size={24} />
       )
     }
+  },
+  Profile: {
+    screen: Profile,
+    navigationOptions:{
+      tabBarLabel: 'PROFILE',
+      tabBarIcon:({tintColor})=>(
+        <Icon name="ios-contact" color={tintColor} size={24} />
+      )
+    }
   }
 });
 

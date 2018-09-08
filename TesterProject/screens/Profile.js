@@ -5,7 +5,7 @@ class Profile extends Component {
   render(){
     return(
       <View style={styles.container}>
-        <Text>Profile</Text>
+        <Text>This is the Profile Page.</Text>
       </View>
     );
   }
