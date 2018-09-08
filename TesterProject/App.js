@@ -2,10 +2,11 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
 import {createBottomTabNavigator} from 'react-navigation';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-import Home from './screens/Home'
-import Order from './screens/Order'
-import Profile from './screens/Profile'
+import Home from './screens/Home';
+import Order from './screens/Order';
+import Profile from './screens/Profile';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -29,10 +30,22 @@ class App extends Component<Props> {
 
 export default createBottomTabNavigator({
   Home: {
-    screen: Home
+    screen: Home,
+    navigationOptions:{
+      tabBarLabel: 'HOME',
+      tabBarIcon:({tintColor})=>(
+        <Icon name="ios-home" color={tintColor} size={24} />
+      )
+    }
   },
   Order: {
-    screen: Order
+    screen: Order,
+    navigationOptions:{
+      tabBarLabel: 'ORDER',
+      tabBarIcon:({tintColor})=>(
+        <Icon name="ios-card" color={tintColor} size={24} />
+      )
+    }
   }
 });
 
